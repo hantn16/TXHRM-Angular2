@@ -19,6 +19,11 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../node_modules/gentelella/vendors/bootstrap/dist/css/bootstrap.css",
+        "../node_modules/gentelella/vendors/font-awesome/css/font-awesome.min.css",
+        "../node_modules/gentelella/vendors/nprogress/nprogress.css",
+        "../node_modules/gentelella/vendors/animate.css/animate.min.css",
+        "../node_modules/gentelella/build/css/custom.css",
         "styles.css"
       ],
       "scripts": [],
