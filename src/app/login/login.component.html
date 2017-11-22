@@ -5,31 +5,38 @@
   <div class="login_wrapper">
     <div class="animate form login_form">
       <section class="login_content">
-        <form>
-          <h1>Login Form</h1>
+        <form name="loginForm" #f="ngForm" novalidate (ngSubmit)="f.form.valid&&login()">
+          <h1>Đăng nhập</h1>
           <div>
-            <input type="text" class="form-control" placeholder="Username" required="" />
+            <input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" placeholder="Username"
+              required />
+            <span [hidden]="username.pristine||username.valid" class="text-danger">Tên đăng nhập không được để trống</span>
           </div>
           <div>
-            <input type="password" class="form-control" placeholder="Password" required="" />
+            <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" placeholder="Password"
+              required />
+            <span [hidden]="password.pristine||password.valid" class="text-danger">
+              Mật khẩu không được để trống
+            </span>
           </div>
           <div>
-            <a class="btn btn-default submit" href="index.html">Log in</a>
-            <a class="reset_pass" href="#">Lost your password?</a>
+            <button type="submit" [disabled]="loading" class="btn btn-info">Đăng nhập</button>
+            <a class="reset_pass" href="#">Quên mật khẩu?</a>
           </div>
 
           <div class="clearfix"></div>
 
           <div class="separator">
-            <p class="change_link">New to site?
-              <a href="#signup" class="to_register"> Create Account </a>
+            <p class="change_link">Chưa có tài khoản?
+              <a href="#signup" class="to_register"> Tạo tài khoản </a>
             </p>
 
             <div class="clearfix"></div>
             <br />
 
             <div>
-              <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+              <h1>
+                <i class="fa fa-paw"></i> TXHRM Admin Login</h1>
               <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
             </div>
           </div>
@@ -65,7 +72,8 @@
             <br />
 
             <div>
-              <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+              <h1>
+                <i class="fa fa-paw"></i> Gentelella Alela!</h1>
               <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
             </div>
           </div>

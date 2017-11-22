@@ -1,0 +1,102 @@
+<div class="page-title">
+  <div class="title_left">
+    <h3>Quản trị phòng ban</h3>
+  </div>
+
+  <div class="title_right">
+    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Từ khóa...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Tìm</button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<router-outlet></router-outlet>
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title">
+        <h2>Danh sách các phòng ban</h2>
+        <ul class="nav navbar-right panel_toolbox">
+          <li>
+            <a class="collapse-link">
+              <i class="fa fa-chevron-up"></i>
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a href="#">Settings 1</a>
+              </li>
+              <li>
+                <a href="#">Settings 2</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="close-link">
+              <i class="fa fa-close"></i>
+            </a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content">
+        <table class="table table-bordered jambo_table table-striped  bulk_action"> <!--jambo_table-->
+          <thead>
+            <tr class="headings">
+              <th>
+                <div class="icheckbox_flat-green" style="position: relative;">
+                  <input type="checkbox" id="check-all" class="flat" style="position: absolute; opacity: 0;">
+                  <!-- <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins> -->
+                </div>
+              </th>
+              <th class="column-title" style="display: table-cell;">Tên phòng ban </th>
+              <th class="column-title" style="display: table-cell;">Trực thuộc</th>
+              <th class="column-title" style="display: table-cell;">Người chịu trách nhiệm chính </th>
+              <th class="column-title" style="display: table-cell;">Status </th>
+              <th class="column-title no-link last" style="display: table-cell;">
+                <span class="nobr">Action</span>
+              </th>
+              <th class="bulk-actions" colspan="7" style="display: none;">
+                <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions (
+                  <span class="action-cnt">1 Records Selected</span> )
+                  <i class="fa fa-chevron-down"></i>
+                </a>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor = "let item of departments">
+              <td class="a-center ">
+                <div class="icheckbox_flat-green" style="position: relative;">
+                  <input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;">
+                  <!-- <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins> -->
+                </div>
+              </td>
+              <td class=" ">{{item.Name}}</td>
+              <td class=" ">{{item.ParentDepartment.Name}} </td>
+              <td class=" ">{{item.Leader.Name}}
+                
+              </td>
+              <td class=" ">{{item.Status}}</td>
+              <td class=" last">
+                <a href="#">View</a>
+                <a href="#">Edit</a>
+                <a href="#">Delete</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

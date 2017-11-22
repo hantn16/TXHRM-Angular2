@@ -4,7 +4,7 @@ import { PostCategoryComponent } from './post-category.component';
 
 
 const routes: Routes = [
-  {path:'',component:PostCategoryComponent,children:[
+  {path: '', component: PostCategoryComponent, children: [
   ]}
 ];
 
