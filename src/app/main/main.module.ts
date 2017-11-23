@@ -11,6 +11,9 @@ import { EmployeeModule } from './employee/employee.module';
 import { PositionModule } from './position/position.module';
 import { UserModule } from './user/user.module';
 
+import { AuthenService } from '../core/services/authen.service';
+import { UtilityService } from '../core/services/utility.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -23,6 +26,7 @@ import { UserModule } from './user/user.module';
     UserModule,
     MainRoutingModule
   ],
-  declarations: [MainComponent]
+  declarations: [MainComponent],
+  providers: [AuthenService,UtilityService]
 })
 export class MainModule { }

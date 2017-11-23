@@ -205,7 +205,7 @@
                                 </ul>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)">
+                                    <a>
                                         <i class="fa fa-laptop"></i> Landing Page
                                         <span class="label label-success pull-right">Coming Soon</span>
                                     </a>
@@ -227,7 +227,7 @@
                     <a data-toggle="tooltip" data-placement="top" title="Lock">
                         <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
                     </a>
-                    <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                    <a data-toggle="tooltip" data-placement="top" title="Logout" (click)="logout()">
                         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                     </a>
                 </div>
@@ -246,25 +246,25 @@
                     </div>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
-                            <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <a class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                 <img src="../assets/images/img.jpg" alt="">Trịnh Ngọc Hân
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
                                 <li>
-                                    <a href="javascript:;"> Profile</a>
+                                    <a> Profile</a>
                                 </li>
                                 <li>
-                                    <a href="javascript:;">
+                                    <a>
                                         <span class="badge bg-red pull-right">50%</span>
                                         <span>Settings</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:;">Help</a>
+                                    <a>Help</a>
                                 </li>
                                 <li>
-                                    <a href="login.html">
+                                    <a (click)="logout()">
                                         <i class="fa fa-sign-out pull-right"></i> Log Out</a>
                                 </li>
                             </ul>

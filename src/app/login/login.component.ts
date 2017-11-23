@@ -21,16 +21,15 @@ export class LoginComponent implements OnInit {
     private router: Router
   ) { }
 
+  model: any = {};
+  loading = false;
   ngOnInit() {
   }
-  // tslint:disable-next-line:member-ordering
-  model: any = {};
-  // tslint:disable-next-line:member-ordering
-  loading = false;
   login() {
     this.loading = true;
     this._authenService.login(this.model.username, this.model.password).subscribe(
       data => {
+        this._notificationService.printSuccessMessage('Đăng nhập thành công');
         this.router.navigate([UrlConstants.HOME]);
       }, error => {
         this._notificationService.printErrorMessage(MessageConstants.SYSTEM_ERROR_MSG);

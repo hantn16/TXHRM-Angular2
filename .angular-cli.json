@@ -26,8 +26,8 @@
         "../node_modules/alertifyjs/build/css/alertify.min.css",
         "../node_modules/alertifyjs/build/css/themes/default.min.css",
         "../src/assets/css/flat/green.css",
-        "../src/assets/css/custom.css",
-        "styles.css"
+        "./app/styles.css",
+        "../src/assets/css/custom.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",

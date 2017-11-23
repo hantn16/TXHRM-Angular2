@@ -13,8 +13,7 @@ export class UtilityService {
   }
 
   convertDateTime(date: Date) {
-    // tslint:disable-next-line:prefer-const
-    let _formattedDate = new Date(date.toString());
+    const _formattedDate = new Date(date.toString());
     return _formattedDate.toDateString();
   }
 
@@ -25,10 +24,8 @@ export class UtilityService {
     this._router.navigate([UrlConstants.LOGIN]);
   }
   Unflatten = (arr: any[]): any[] => {
-    // tslint:disable-next-line:prefer-const
-    let map = {};
-    // tslint:disable-next-line:prefer-const
-    let roots: any[] = [];
+    const map = {};
+    const roots: any[] = [];
     for (let i = 0; i < arr.length; i += 1) {
       const node = arr[i];
       node.children = [];
