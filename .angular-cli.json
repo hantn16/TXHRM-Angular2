@@ -26,17 +26,16 @@
         "../node_modules/alertifyjs/build/css/alertify.min.css",
         "../node_modules/alertifyjs/build/css/themes/default.min.css",
         "../src/assets/css/flat/green.css",
-        "./app/styles.css",
+        "styles.css",
         "../src/assets/css/custom.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
         "../node_modules/fastclick/lib/fastclick.js",
-        "../node_modules/nprogress/nprogress.js",
         "../node_modules/alertifyjs/build/alertify.min.js",
         "../src/assets/js/icheck.js",
-        "../src/assets/js/custom.js"
+        "../node_modules/nprogress/nprogress.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

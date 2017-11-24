@@ -12,7 +12,7 @@ import { PostCategoryComponent } from './post-category/post-category.component';
 const routes: Routes = [
   {
     path: '', component: MainComponent, children: [
-      { path: '', redirectTo: '/home', pathMatch: 'full'},
+      { path: '', redirectTo: 'home', pathMatch: 'full'},
       { path: 'home', loadChildren: './home/home.module#HomeModule' },
       { path: 'post-category', loadChildren: './post-category/post-category.module#PostCategoryModule' },
       { path: 'department', loadChildren: './department/department.module#DepartmentModule' },

@@ -27,6 +27,6 @@ import { UtilityService } from '../core/services/utility.service';
     MainRoutingModule
   ],
   declarations: [MainComponent],
-  providers: [AuthenService,UtilityService]
+  providers: [AuthenService, UtilityService]
 })
 export class MainModule { }

@@ -69,7 +69,7 @@ var setContentHeight = function () {
 	$RIGHT_COL.css('min-height', contentHeight);
 };
 
-  $SIDEBAR_MENU.find('a').on('click', function(ev) {
+  $SIDEBAR_MENU.find('a').off('click').on('click', function(ev) {
 	  console.log('clicked - sidebar_menu');
         var $li = $(this).parent();
 
@@ -100,7 +100,7 @@ var setContentHeight = function () {
     });
 
 // toggle small or large menu 
-$MENU_TOGGLE.on('click', function() {
+$MENU_TOGGLE.off('click').on('click', function() {
 		console.log('clicked - menu toggle');
 		
 		if ($BODY.hasClass('nav-md')) {
@@ -152,7 +152,7 @@ $MENU_TOGGLE.on('click', function() {
 
 // Panel toolbox
 $(document).ready(function() {
-    $('.collapse-link').on('click', function() {
+    $('.collapse-link').off('click').on('click', function() {
         var $BOX_PANEL = $(this).closest('.x_panel'),
             $ICON = $(this).find('i'),
             $BOX_CONTENT = $BOX_PANEL.find('.x_content');
@@ -220,12 +220,12 @@ $(document).ready(function() {
 // /iCheck
 
 // Table
-$('table input').on('ifChecked', function () {
+$('table input').off('ifChecked').on('ifChecked', function () {
     checkState = '';
     $(this).parent().parent().parent().addClass('selected');
     countChecked();
 });
-$('table input').on('ifUnchecked', function () {
+$('table input').off('ifUnchecked').on('ifUnchecked', function () {
     checkState = '';
     $(this).parent().parent().parent().removeClass('selected');
     countChecked();
@@ -233,21 +233,21 @@ $('table input').on('ifUnchecked', function () {
 
 var checkState = '';
 
-$('.bulk_action input').on('ifChecked', function () {
+$('.bulk_action input').off('ifChecked').on('ifChecked', function () {
     checkState = '';
     $(this).parent().parent().parent().addClass('selected');
     countChecked();
 });
-$('.bulk_action input').on('ifUnchecked', function () {
+$('.bulk_action input').off('ifUnchecked').on('ifUnchecked', function () {
     checkState = '';
     $(this).parent().parent().parent().removeClass('selected');
     countChecked();
 });
-$('.bulk_action input#check-all').on('ifChecked', function () {
+$('.bulk_action input#check-all').off('ifChecked').on('ifChecked', function () {
     checkState = 'all';
     countChecked();
 });
-$('.bulk_action input#check-all').on('ifUnchecked', function () {
+$('.bulk_action input#check-all').off('ifUnchecked').on('ifUnchecked', function () {
     checkState = 'none';
     countChecked();
 });
@@ -962,7 +962,7 @@ if (typeof NProgress != 'undefined') {
 			$/*.listen*/('parsley:field:validate', function() {
 			  validateFront();
 			});
-			$('#demo-form .btn').on('click', function() {
+			$('#demo-form .btn').off('click').on('click', function() {
 			  $('#demo-form').parsley().validate();
 			  validateFront();
 			});
@@ -979,7 +979,7 @@ if (typeof NProgress != 'undefined') {
 			$/*.listen*/('parsley:field:validate', function() {
 			  validateFront();
 			});
-			$('#demo-form2 .btn').on('click', function() {
+			$('#demo-form2 .btn').off('click').on('click', function() {
 			  $('#demo-form2').parsley().validate();
 			  validateFront();
 			});
@@ -1230,7 +1230,7 @@ if (typeof NProgress != 'undefined') {
 
 
 			// Methods
-			$('.docs-buttons').on('click', '[data-method]', function () {
+			$('.docs-buttons').off('click').on('click', '[data-method]', function () {
 			  var $this = $(this);
 			  var data = $this.data();
 			  var $target;

@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, AfterViewChecked, ElementRef } from '@angular/core';
+import { Component, AfterViewChecked, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -14,12 +14,12 @@ export class AppComponent implements AfterViewChecked {
     const existsScript = document.getElementById('customJS');
     if (existsScript != null) {
       this.elementRef.nativeElement.removeChild(existsScript);
-    } else {
-      const s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.src = '../assets/js/custom.js';
-      s.id = 'customJS';
-      this.elementRef.nativeElement.appendChild(s);
     }
+    const s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.src = '../assets/js/custom.js';
+    s.id = 'customJS';
+    this.elementRef.nativeElement.appendChild(s);
+
   }
 }
