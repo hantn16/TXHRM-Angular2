@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { PositionComponent } from './position.component';
 
 const routes: Routes = [
-  {path: '', component: PositionComponent, children: [
-  ]}
+  {path: '', redirectTo: 'index', pathMatch: 'full'},
+  {path: 'index', component: PositionComponent},
 ];
 
 @NgModule({

@@ -8,6 +8,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { PositionComponent } from './position/position.component';
 import { DepartmentComponent } from './department/department.component';
 import { PostCategoryComponent } from './post-category/post-category.component';
+import {RoleComponent} from './role/role.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,8 @@ const routes: Routes = [
       { path: 'position', loadChildren: './position/position.module#PositionModule' },
       { path: 'employee', loadChildren: './employee/employee.module#EmployeeModule' },
       { path: 'post', loadChildren: './post/post.module#PostModule' },
-      { path: 'user', loadChildren: './user/user.module#UserModule'}
+      { path: 'user', loadChildren: './user/user.module#UserModule'},
+      { path: 'role', loadChildren: './role/role.module#RoleModule'}
     ]
   }
 ];

@@ -3,10 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { DepartmentComponent } from './department.component';
 
 const routes: Routes = [
-  {
-    path: '', component: DepartmentComponent, children: [
-    ]
-  }
+  {path: '', redirectTo: 'index', pathMatch: 'full'},
+  {path: 'index', component: DepartmentComponent},
 ];
 
 @NgModule({

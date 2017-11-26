@@ -25,19 +25,27 @@ export class DataService {
     return body || {};
   }
   get(uri: string) {
-    return this._http.get(SystemConstants.BASE_API + uri, { headers: this.getAuthorizedHeader() })
+    const header = this.getAuthorizedHeader();
+    header.append('Content-Type', 'application/json');
+    return this._http.get(SystemConstants.BASE_API + uri, { headers: header })
       .map((res: Response) => this.extractData(res));
   }
   post(uri: string, data?: any) {
-    return this._http.post(SystemConstants.BASE_API + uri, data, { headers: this.getAuthorizedHeader() })
+    const header = this.getAuthorizedHeader();
+    header.append('Content-Type', 'application/json');
+    return this._http.post(SystemConstants.BASE_API + uri, data, { headers: header })
       .map((res: Response) => this.extractData(res));
   }
   put(uri: string, data?: any) {
-    return this._http.put(SystemConstants.BASE_API + uri, data, { headers: this.getAuthorizedHeader() })
+    const header = this.getAuthorizedHeader();
+    header.append('Content-Type', 'application/json');
+    return this._http.put(SystemConstants.BASE_API + uri, data, { headers: header })
       .map((res: Response) => this.extractData(res));
   }
   delete(uri: string, key: string, id: string) {
-    return this._http.delete(`${SystemConstants.BASE_API + uri}/?${key}=${id}`, { headers: this.getAuthorizedHeader() })
+    const header = this.getAuthorizedHeader();
+    header.append('Content-Type', 'application/json');
+    return this._http.delete(`${SystemConstants.BASE_API + uri}/?${key}=${id}`, { headers: header })
       .map((res: Response) => this.extractData(res));
   }
   postFile(uri: string, data?: any) {

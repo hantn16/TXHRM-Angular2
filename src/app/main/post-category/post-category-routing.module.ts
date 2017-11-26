@@ -4,8 +4,8 @@ import { PostCategoryComponent } from './post-category.component';
 
 
 const routes: Routes = [
-  {path: '', component: PostCategoryComponent, children: [
-  ]}
+  { path: '', redirectTo: 'index', pathMatch: 'full' },
+  { path: 'index', component: PostCategoryComponent }
 ];
 
 @NgModule({
