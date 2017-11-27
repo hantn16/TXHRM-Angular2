@@ -3,6 +3,6 @@
     border-color:#42A948; /* green */
   }
   
-  .ng-invalid:not(form)  {
+  .ng-invalid:not(.ng-pristine)  {
     border-color: #a94442; /* red */
   }

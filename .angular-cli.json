@@ -21,7 +21,6 @@
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.css",
         "../node_modules/font-awesome/css/font-awesome.min.css",
-        "../node_modules/nprogress/nprogress.css",
         "../node_modules/animate.css/animate.min.css",
         "../node_modules/alertifyjs/build/css/alertify.min.css",
         "../node_modules/alertifyjs/build/css/themes/default.min.css",
@@ -34,8 +33,8 @@
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
         "../node_modules/fastclick/lib/fastclick.js",
         "../node_modules/alertifyjs/build/alertify.min.js",
-        "../src/assets/js/icheck.js",
-        "../node_modules/nprogress/nprogress.js"
+        "../node_modules/moment/moment.js",
+        "../src/assets/js/icheck.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

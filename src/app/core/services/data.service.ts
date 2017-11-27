@@ -59,7 +59,8 @@ export class DataService {
       this._notificationService.printErrorMessage(MessageConstants.LOGIN_AGAIN_MSG);
       this._utilityService.navigateToLogin();
     } else {
-      const errMsg = error.message ? error.message : error.status ? `${error.status} - ${error.statusText}` : 'Lỗi hệ thống';
+      const errMsg = error.message ? error.message : error.status ? `${error.status} - ${error.statusText} : ${error.statusText}`
+       : 'Lỗi hệ thống';
       this._notificationService.printErrorMessage(errMsg);
       return Observable.throw(errMsg);
     }
